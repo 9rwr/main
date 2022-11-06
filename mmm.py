@@ -59,6 +59,7 @@ def gmail():
             xb = requests.get(url0).text
         except requests.exceptions.SSLError as error:
             print('Error')
+            continue
         
       
         if ('"status":"BAD"') in xb:
