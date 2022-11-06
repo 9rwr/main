@@ -16,7 +16,7 @@ m =0
 n = 0
 s = 0
 b = 0
-id2  = ('121212')
+id2  = ('121212ssss')
 urlp = requests.get('https://pastebin.com/Lb2PH728').text
 if id2 in urlp:
     os.system('cls'if os.name=='nt'else'clear')
