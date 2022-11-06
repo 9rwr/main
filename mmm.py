@@ -380,11 +380,7 @@ try:
     elif inp==4:
         gmail()
 
-        try:
-            
-            os.remove('tokenid.txt')
-        except FileNotFoundError as error:
-            print('\nFile Error in Pc')
+
     elif inp ==0:
         try:
             os.remove('user.txt')
