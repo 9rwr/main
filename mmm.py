@@ -185,7 +185,7 @@ def fol2():
                     
                     usr1 = re4['user_list'][ii]['user_info']['unique_id']
                     a+=1
-                    os.system('cls'if os.name=='nt'else'claer')
+                    os.system('cls'if os.name=='nt'else'clear')
                     print(f'[=] - Done : {a}\n[=] - User : {usr1}\n[=] - Bad : {p}\n')
                     with open('user.txt','a') as fo:
                         fo.write(f'{usr1}@gmail.com\n')
