@@ -53,8 +53,13 @@ def gmail():
         print('Error File')
         exit()
     for email in file:
-        url0 = f'https://ffnzz.scriptfree.repl.co/api-Checker-Gmail/?email={email}'
-        xb = requests.get(url0).text
+        try:
+            
+            url0 = f'https://ffnzz.scriptfree.repl.co/api-Checker-Gmail/?email={email}'
+            xb = requests.get(url0).text
+        except requests.exceptions.SSLError as error:
+            print('Error')
+        
       
         if ('"status":"BAD"') in xb:
             p+=1
