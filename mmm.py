@@ -84,9 +84,10 @@ def gmail():
                 os.system('cls' if os.name =='nt'else'clear')
                 print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
                 us11 = email.split('@')[0]
+                
+                ui = f'https://qado-tik-info.reback.repl.co/?user={us11}&sess=8'
+                ik = requests.get(ui).text
                 try:
-                    ui = f'https://qado-tik-info.reback.repl.co/?user={us11}&sess=8'
-                    ik = requests.get(ui).text
                     nam = ik.split('name :')[1]
                     name = nam.split('follower')[0]
                     fo = nam.split('follower :')[1]
