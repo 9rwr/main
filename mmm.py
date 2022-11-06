@@ -114,8 +114,7 @@ def gmail():
                 tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={req}')
                 ru= requests.post(tlg)
                
-                with open('true.txt','a') as f8:
-                    f8.write(f'{req}\n')
+               #
                 
         elif ('"Bind device by email failed"') in ree:
             m+=1
