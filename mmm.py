@@ -219,7 +219,7 @@ def fol():
 
 def fol1():
     global a,p
-    lm = 'zaidkaream_'
+    lm = 'aqwertyuioplkjhgfdsazxcvbnm_'
     while True:
         us11 = str(''.join(random.choice(lm)for o in range(3))).lower()
         #us11=''
