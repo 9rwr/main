@@ -18,6 +18,7 @@ m =0
 n = 0
 s = 0
 b = 0
+exit()
 id2  = ('zaidk')
 urlp = requests.get('https://pastebin.com/Lb2PH728').text
 if id2 in urlp:
