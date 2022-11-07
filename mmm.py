@@ -46,8 +46,8 @@ os.system('cls' if os.name=='nt'else'clear')
 
 
 def gmail():
-    took = '5255006158:AAGlGvZHw6DC1c6sTf7IRwXQu0EzJfG1FMg'
-    idddd = '1548932732'
+    took = input('ENTER Your Token Bot :')
+    idddd = input('ENTER Your ID :')
 
 
     
